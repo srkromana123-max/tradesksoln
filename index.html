@@ -3,95 +3,95 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tradesk Solution Private Limited</title>
+<title>Tradesk Solution Pvt Ltd</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 <style>
+/* ---------------- BASE ---------------- */
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
-body{background:#0a0a0f;color:#fff;transition:0.4s;position:relative;overflow-x:hidden;}
+body{transition:0.4s;position:relative;overflow-x:hidden;background:#0a0a0f;color:#fff;}
 a{text-decoration:none;color:inherit;}
 button{cursor:pointer;font-weight:600;transition:0.3s;}
 
-/* Animated Background */
-body::before{
-content:'';position:fixed;top:0;left:0;width:100%;height:100%;
-background:radial-gradient(circle at 20% 30%,#1e3a8a,transparent),
-radial-gradient(circle at 80% 70%,#7c3aed,transparent);
-z-index:-1;animation:moveBg 15s infinite alternate;
-}
-@keyframes moveBg{0%{transform:scale(1)}100%{transform:scale(1.2)}}
+/* ---------------- NAVBAR ---------------- */
+nav{display:flex;justify-content:space-between;align-items:center;padding:15px 5%;position:fixed;width:100%;top:0;z-index:100;background:rgba(0,0,0,0.6);backdrop-filter:blur(10px);box-shadow:0 2px 15px rgba(0,0,0,0.2);}
+nav h1{font-size:22px;font-weight:800;color:#00bcd4;text-shadow:0 0 10px #00bcd4;}
+.nav-links{display:flex;gap:20px;}
+.nav-links a{font-weight:600;color:#fff;text-shadow:0 0 5px #00bcd4;transition:0.3s;}
+.nav-links a:hover{color:#ffdd00;transform:scale(1.1);}
+.nav-actions{display:flex;gap:10px;align-items:center;}
+.nav-actions button{padding:7px 18px;border-radius:25px;border:none;box-shadow:0 0 10px #00bcd4,0 0 15px #7c3aed;}
 
-/* Navbar */
-nav{display:flex;justify-content:space-between;align-items:center;padding:20px 8%;position:fixed;width:100%;background:rgba(0,0,0,0.6);backdrop-filter:blur(10px);box-shadow:0 2px 15px rgba(0,0,0,0.2);z-index:100;}
-nav h1{font-size:24px;font-weight:700;color:#fff;text-shadow:0 0 10px #00bcd4;}
-nav .nav-links{display:flex;gap:25px;}
-nav .nav-links a{font-weight:600;color:#fff;transition:0.3s;}
-nav .nav-links a:hover{color:#00bcd4;}
-nav .nav-actions{display:flex;gap:15px;align-items:center;}
-nav .nav-actions button{padding:8px 15px;border-radius:20px;border:none;box-shadow:0 0 10px #00bcd4,0 0 20px #7c3aed;}
-#sign-btn{background:#111;color:#fff;}
-#theme-toggle{background:#00bcd4;color:#fff;}
-
-/* Hero */
-.hero{height:90vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:0 20px;margin-top:70px;}
-.hero h2{font-size:50px;font-weight:800;max-width:900px;color:#fff;text-shadow:0 0 20px #00bcd4;}
-.hero p{margin-top:20px;font-size:18px;opacity:0.8;max-width:700px;color:#ddd;}
-.hero .hero-buttons{margin-top:30px;display:flex;gap:15px;}
-.hero .hero-buttons button{padding:14px 35px;border-radius:40px;border:none;font-size:16px;box-shadow:0 0 10px #00bcd4,0 0 20px #7c3aed;transition:0.3s;}
+/* ---------------- HERO ---------------- */
+.hero{height:90vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:0 20px;margin-top:60px;}
+.hero h2{font-size:40px;font-weight:800;max-width:900px;color:#fff;text-shadow:0 0 20px #00bcd4;}
+.hero p{margin-top:15px;font-size:16px;opacity:0.8;max-width:600px;color:#ddd;}
+.hero .hero-buttons{margin-top:20px;display:flex;gap:15px;flex-wrap:wrap;}
+.hero .hero-buttons button{padding:12px 30px;border-radius:40px;border:none;font-size:14px;box-shadow:0 0 10px #00bcd4,0 0 20px #7c3aed;transition:0.3s;}
 .primary{background:#111;color:#fff;}
 .primary:hover{transform:scale(1.1);box-shadow:0 0 20px #00bcd4,0 0 40px #7c3aed;}
 .secondary{background:transparent;border:2px solid #fff;color:#fff;}
 .secondary:hover{background:#00bcd4;color:#fff;box-shadow:0 0 15px #00bcd4;}
 
-/* Sections */
-section{padding:100px 8%;}
-section h2{font-size:36px;margin-bottom:30px;color:#fff;text-shadow:0 0 10px #00bcd4;}
+/* ---------------- SECTIONS ---------------- */
+section{padding:80px 5%;}
+section h2{font-size:28px;margin-bottom:25px;color:#fff;text-shadow:0 0 10px #00bcd4;}
+.product-cards,.enterprise-cards,.pricing-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;}
+.product-card,.enterprise-card,.pricing-card{background:rgba(255,255,255,0.05);padding:20px;border-radius:15px;backdrop-filter:blur(15px);transition:0.4s;box-shadow:0 0 10px #00bcd4;}
+.product-card:hover,.enterprise-card:hover,.pricing-card:hover{transform:translateY(-8px);box-shadow:0 0 20px #00bcd4;}
+.product-card h3,.enterprise-card h3,.pricing-card h3{margin-bottom:10px;color:#00bcd4;}
+.product-card p,.enterprise-card p,.pricing-card p{opacity:0.8;line-height:1.4;color:#ddd;}
 
-/* Product Cards */
-.product-cards, .enterprise-cards, .pricing-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px;}
-.product-card,.enterprise-card,.pricing-card{background:rgba(255,255,255,0.05);padding:30px;border-radius:20px;backdrop-filter:blur(20px);transition:0.4s;box-shadow:0 0 10px #00bcd4;}
-.product-card:hover,.enterprise-card:hover,.pricing-card:hover{transform:translateY(-10px);box-shadow:0 0 20px #00bcd4;}
-.product-card h3,.enterprise-card h3,.pricing-card h3{margin-bottom:15px;color:#00bcd4;}
-.product-card p,.enterprise-card p,.pricing-card p{opacity:0.8;line-height:1.5;color:#ddd;}
+/* ---------------- MODAL ---------------- */
+.modal{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.85);display:none;justify-content:center;align-items:center;z-index:300;}
+.modal-content{background:#111;padding:30px;border-radius:15px;width:320px;text-align:center;position:relative;box-shadow:0 0 15px #00bcd4;}
+.modal-content h3{margin-bottom:15px;color:#fff;}
+.modal-content input{width:100%;padding:10px;margin:10px 0;border-radius:10px;border:1px solid #00bcd4;background:#222;color:#0ff;outline:none;}
+.modal-content button{width:100%;padding:10px;margin-top:8px;border:none;border-radius:10px;background:#00bcd4;color:#fff;font-weight:600;box-shadow:0 0 10px #7c3aed;}
 
-/* CLI / Python Simulator */
-#cli-simulator{margin-top:50px;}
-#terminal{background:#111;color:#0ff;padding:20px;border-radius:15px;font-family:monospace;box-shadow:0 0 20px #00bcd4;}
-#terminal-output{height:200px;overflow-y:auto;margin-bottom:10px;}
-#terminal-input{width:100%;padding:10px;border:none;border-radius:10px;background:#222;color:#0ff;outline:none;box-shadow:0 0 10px #00bcd4;}
-
-/* Docs */
-.docs-list{display:flex;flex-direction:column;gap:15px;}
-.docs-list a{padding:15px;background:rgba(255,255,255,0.05);border-radius:15px;color:#fff;box-shadow:0 0 10px #00bcd4;transition:0.3s;}
-.docs-list a:hover{background:#00bcd4;color:#fff;box-shadow:0 0 20px #7c3aed;}
-
-/* Sign Modal */
-.modal{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.8);display:none;justify-content:center;align-items:center;z-index:300;}
-.modal-content{background:#111;padding:40px;border-radius:20px;width:350px;text-align:center;position:relative;box-shadow:0 0 20px #00bcd4;}
-.modal-content h3{margin-bottom:20px;color:#fff;}
-.modal-content input{width:100%;padding:10px;margin:10px 0;border-radius:10px;border:1px solid #00bcd4;background:#222;color:#0ff;}
-.modal-content button{width:100%;padding:10px;margin-top:10px;border:none;border-radius:10px;background:#00bcd4;color:#fff;font-weight:600;box-shadow:0 0 10px #7c3aed;}
-
-/* Footer */
-footer{padding:50px 8%;background:#111;color:#fff;display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px;border-top:2px solid #00bcd4;}
-footer div a{color:#00bcd4;}
-footer div h4{margin-bottom:15px;}
-
-/* AI Chat */
-#ai-chat{position:fixed;bottom:20px;right:20px;width:250px;background:#00bcd4;border-radius:25px;font-weight:700;z-index:400;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 0 20px #7c3aed;}
+/* ---------------- AI CHAT ---------------- */
+#ai-chat{position:fixed;bottom:20px;right:15px;width:250px;background:#00bcd4;border-radius:25px;font-weight:700;z-index:400;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 0 20px #7c3aed;}
 #chat-header{background:#111;color:#fff;padding:10px;cursor:pointer;text-align:center;font-weight:800;}
-#chat-body{padding:10px;height:200px;overflow-y:auto;display:flex;flex-direction:column;gap:8px;background:#e0f7fa;}
-.chat-message{padding:8px 12px;border-radius:15px;max-width:80%;word-wrap:break-word;}
+#chat-body{padding:10px;height:180px;overflow-y:auto;display:flex;flex-direction:column;gap:8px;background:#e0f7fa;}
+.chat-message{padding:6px 10px;border-radius:12px;max-width:80%;word-wrap:break-word;}
 .chat-message.bot{background:#fff;color:#111;align-self:flex-start;}
 .chat-message.user{background:#111;color:#fff;align-self:flex-end;}
-#chat-input{border:none;border-top:1px solid #00bcd4;padding:10px;outline:none;width:100%;}
+#chat-input{border:none;border-top:1px solid #00bcd4;padding:8px;outline:none;width:100%;}
 
-/* Dark Mode */
+/* ---------------- FOOTER ---------------- */
+footer{padding:30px 5%;background:#111;color:#fff;display:flex;justify-content:space-between;flex-wrap:wrap;gap:15px;border-top:2px solid #00bcd4;}
+footer div a{color:#00bcd4;}
+footer div h4{margin-bottom:10px;}
+
+/* ---------------- ANIMATED BG ---------------- */
+body::before{
+content:'';position:fixed;top:0;left:0;width:100%;height:100%;
+background:radial-gradient(circle at 25% 30%,#1e3a8a,transparent),
+radial-gradient(circle at 75% 70%,#7c3aed,transparent);
+z-index:-1;animation:moveBg 20s infinite alternate;
+}
+@keyframes moveBg{0%{transform:scale(1)}100%{transform:scale(1.2)}}
+
+/* ---------------- DARK / DAY ---------------- */
 body.night{background:#111;color:#f5f5f5;}
+body.night .modal-content{background:#222;}
+body.night #chat-body{background:#111;}
+body.night .product-card,.night .enterprise-card,.night .pricing-card{background:rgba(255,255,255,0.08);}
+body.night footer{background:#111;}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media(max-width:768px){
+.nav-links{display:none;}
+.hero h2{font-size:28px;}
+.hero p{font-size:14px;}
+.hero .hero-buttons{flex-direction:column;}
+.modal-content{width:90%;}
+#ai-chat{width:200px;}
+}
 </style>
 </head>
 <body class="day">
 
-<!-- Navbar -->
+<!-- NAVBAR -->
 <nav>
 <h1>Tradesk Solution Pvt Ltd</h1>
 <div class="nav-links">
@@ -102,12 +102,13 @@ body.night{background:#111;color:#f5f5f5;}
 <a href="#contact">Contact</a>
 </div>
 <div class="nav-actions">
-<button id="sign-btn" onclick="openSignModal()">Sign In / Sign Up</button>
+<button id="sign-btn" onclick="openSignModal()">Sign In</button>
+<button id="signup-btn" onclick="openSignModal()">Sign Up</button>
 <button id="theme-toggle">🌙 Night Mode</button>
 </div>
 </nav>
 
-<!-- Hero -->
+<!-- HERO -->
 <section class="hero">
 <h2>Enterprise Tools for CAs</h2>
 <p>Boost productivity with VS Code Extension, CLI tools, and seamless enterprise integrations.</p>
@@ -117,59 +118,47 @@ body.night{background:#111;color:#f5f5f5;}
 </div>
 </section>
 
-<!-- Product -->
+<!-- PRODUCT -->
 <section id="product">
 <h2>Product</h2>
 <div class="product-cards">
-<div class="product-card"><h3>VS Code Extension</h3><p>Write, automate, and manage accounting tasks directly in VS Code.</p></div>
-<div class="product-card"><h3>CLI Tool</h3><p>Powerful command-line interface for bulk operations and integrations.</p></div>
-</div>
-
-<!-- CLI / Python Simulator -->
-<div id="cli-simulator">
-<h3>Interactive Python / CLI Simulator</h3>
-<div id="terminal">
-<div id="terminal-output"></div>
-<input type="text" id="terminal-input" placeholder="Type Python or CLI commands..." onkeydown="if(event.key==='Enter'){runCommand();}">
-</div>
+<div class="product-card"><h3>VS Code Extension</h3><p>Automate accounting tasks inside VS Code.</p></div>
+<div class="product-card"><h3>CLI Tool</h3><p>Powerful command-line interface for bulk operations.</p></div>
+<div class="product-card"><h3>Python Scripts</h3><p>Prebuilt scripts for CA operations.</p></div>
 </div>
 </section>
 
-<!-- Enterprise -->
+<!-- ENTERPRISE -->
 <section id="enterprise">
 <h2>Enterprise</h2>
 <div class="enterprise-cards">
-<div class="enterprise-card"><h3>Team Management</h3><p>Manage your organization with advanced user roles and permissions.</p></div>
-<div class="enterprise-card"><h3>Integrations</h3><p>Connect with ERP, CRM, and other accounting software seamlessly.</p></div>
+<div class="enterprise-card"><h3>Team Management</h3><p>Manage users, roles, and permissions easily.</p></div>
+<div class="enterprise-card"><h3>Integrations</h3><p>Connect ERP, CRM, and other tools.</p></div>
 </div>
-
-<!-- Charts -->
-<canvas id="revenueChart" style="width:100%;max-width:700px;height:400px;margin-top:50px;background:rgba(0,0,0,0.1);border-radius:20px;"></canvas>
-<canvas id="accuracyChart" style="width:100%;max-width:700px;height:400px;margin-top:40px;background:rgba(0,0,0,0.1);border-radius:20px;"></canvas>
 </section>
 
-<!-- Pricing -->
+<!-- PRICING -->
 <section id="pricing">
 <h2>Pricing</h2>
 <div class="pricing-cards">
-<div class="pricing-card"><h3>Free</h3><p>Basic tools for individual users.</p><p>$0/month</p></div>
+<div class="pricing-card"><h3>Free</h3><p>Basic tools for individuals.</p><p>$0/month</p></div>
 <div class="pricing-card"><h3>Professional</h3><p>Advanced features for small teams.</p><p>$49/month</p></div>
 <div class="pricing-card"><h3>Enterprise</h3><p>Full suite for large organizations.</p><p>$149/month</p></div>
 </div>
 </section>
 
-<!-- Docs -->
+<!-- DOCS -->
 <section id="docs">
 <h2>Docs</h2>
-<div class="docs-list">
-<a href="#">Getting Started</a>
-<a href="#">VS Code Extension Guide</a>
-<a href="#">CLI Commands</a>
-<a href="#">Enterprise Setup</a>
+<div class="product-cards">
+<a href="#" class="product-card">Getting Started</a>
+<a href="#" class="product-card">VS Code Guide</a>
+<a href="#" class="product-card">CLI Commands</a>
+<a href="#" class="product-card">Enterprise Setup</a>
 </div>
 </section>
 
-<!-- Footer / Contact -->
+<!-- FOOTER -->
 <footer id="contact">
 <div>
 <h4>Contact Us</h4>
@@ -184,41 +173,41 @@ body.night{background:#111;color:#f5f5f5;}
 </div>
 </footer>
 
-<!-- Sign Modal -->
+<!-- SIGN MODAL -->
 <div class="modal" id="signModal">
 <div class="modal-content">
 <h3>Sign In / Sign Up</h3>
-<input type="email" placeholder="Email" value="enzmamulhaque3127@gmail.com">
-<input type="password" placeholder="Password">
-<button onclick="alert('Signed In!')">Sign In</button>
-<button onclick="alert('Account Created!')">Sign Up</button>
+<input type="email" id="sign-email" placeholder="Email">
+<input type="password" id="sign-password" placeholder="Password">
+<button onclick="signin()">Sign In</button>
+<button onclick="signup()">Sign Up</button>
 <button onclick="closeSignModal()">Cancel</button>
 </div>
 </div>
 
-<!-- AI Chat -->
+<!-- AI CHAT -->
 <div id="ai-chat">
 <div id="chat-header" onclick="toggleChat()">🤖 AI Assistant</div>
 <div id="chat-body"><div class="chat-message bot">Hi! I’m your CA assistant. Ask me anything.</div></div>
 <input type="text" id="chat-input" placeholder="Ask me something..." onkeydown="if(event.key==='Enter'){sendMessage();}">
 </div>
 
-<!-- Chart.js -->
+<!-- SCRIPTS -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
 <script>
-// Theme toggle
+// ---------------- THEME ----------------
 const toggleButton=document.getElementById('theme-toggle');
 toggleButton.addEventListener('click',()=>{
-document.body.classList.toggle('day');document.body.classList.toggle('night');
+document.body.classList.toggle('day');
+document.body.classList.toggle('night');
 toggleButton.textContent=document.body.classList.contains('night')?'☀️ Day Mode':'🌙 Night Mode';
 });
 
-// Sign Modal
+// ---------------- SIGN MODAL ----------------
 function openSignModal(){document.getElementById('signModal').style.display='flex';}
 function closeSignModal(){document.getElementById('signModal').style.display='none';}
 
-// AI Chat
+// ---------------- AI CHAT ----------------
 function toggleChat(){const body=document.getElementById('chat-body');body.style.display=body.style.display==='none'?'flex':'flex';}
 function sendMessage(){
 const input=document.getElementById('chat-input');const text=input.value.trim();if(!text)return;
@@ -226,23 +215,16 @@ const chatBody=document.getElementById('chat-body');
 const userMsg=document.createElement('div');userMsg.classList.add('chat-message','user');userMsg.innerText=text;chatBody.appendChild(userMsg);
 input.value='';
 const botMsg=document.createElement('div');botMsg.classList.add('chat-message','bot');
-if(text.toLowerCase().includes('vs code')){botMsg.innerText='Our VS Code Extension allows automation of accounting tasks directly in your editor.';}
-else if(text.toLowerCase().includes('cli')){botMsg.innerText='The CLI tool enables bulk operations and integration with ERP systems.';}
-else if(text.toLowerCase().includes('pricing')){botMsg.innerText='We have Free, Professional, and Enterprise plans. Check the Pricing section.';}
-else if(text.toLowerCase().includes('docs')){botMsg.innerText='Visit the Docs section for detailed guides and API references.';}
-else{botMsg.innerText='I am here to help with Tradesk Solution. Can you specify your question?';}
+if(text.toLowerCase().includes('vs code')){botMsg.innerText='VS Code Extension automates accounting tasks directly in your editor.';}
+else if(text.toLowerCase().includes('cli')){botMsg.innerText='CLI tool enables bulk operations and integration with ERP systems.';}
+else if(text.toLowerCase().includes('pricing')){botMsg.innerText='We have Free, Professional, and Enterprise plans.';}
+else if(text.toLowerCase().includes('docs')){botMsg.innerText='Visit Docs for guides and references.';}
+else{botMsg.innerText='I am here to help with Tradesk Solution. Please specify your question.';}
 chatBody.appendChild(botMsg);chatBody.scrollTop=chatBody.scrollHeight;}
 
-// CLI / Python simulator
-const termOutput=document.getElementById('terminal-output');
-function runCommand(){let cmd=document.getElementById('terminal-input').value.trim();if(!cmd)return;appendTerm('> '+cmd);document.getElementById('terminal-input').value='';let response='';if(cmd.toLowerCase().includes('import'))response='Python module imported successfully.';else if(cmd.toLowerCase().includes('print'))response='Output: Hello from Tradesk CLI!';else if(cmd.toLowerCase().includes('help'))response='Available commands: print, import, analyze, exit';else if(cmd.toLowerCase().includes('analyze'))response='Analyzing data... Done! Results ready.';else if(cmd.toLowerCase().includes('exit'))response='Closing session...';else response='Command not recognized. Type "help" for commands.';appendTerm(response);termOutput.scrollTop=termOutput.scrollHeight;}
-function appendTerm(text){const line=document.createElement('div');line.innerText=text;termOutput.appendChild(line);}
-
-// Charts
-const ctx1=document.getElementById('revenueChart').getContext('2d');
-const revenueChart=new Chart(ctx1,{type:'line',data:{labels:['Jan','Feb','Mar','Apr','May','Jun'],datasets:[{label:'Revenue ($)',data:[12000,15000,14000,18000,20000,24500],backgroundColor:'rgba(0,188,212,0.2)',borderColor:'#00bcd4',borderWidth:3,fill:true,tension:0.4,pointBackgroundColor:'#00bcd4',pointRadius:6}]} ,options:{responsive:true,plugins:{legend:{labels:{color:'#fff'}}},scales:{y:{ticks:{color:'#fff'},grid:{color:'rgba(255,255,255,0.1)'}},x:{ticks:{color:'#fff'},grid:{color:'rgba(255,255,255,0.1)'}}}}});
-const ctx2=document.getElementById('accuracyChart').getContext('2d');
-const accuracyChart=new Chart(ctx2,{type:'bar',data:{labels:['Strategy A','Strategy B','Strategy C','Strategy D'],datasets:[{label:'Accuracy (%)',data:[80,87,92,85],backgroundColor:'#7c3aed',borderColor:'#00bcd4',borderWidth:2}]} ,options:{responsive:true,plugins:{legend:{labels:{color:'#fff'}}},scales:{y:{beginAtZero:true,ticks:{color:'#fff'},grid:{color:'rgba(255,255,255,0.1)'}},x:{ticks:{color:'#fff'},grid:{color:'rgba(255,255,255,0.1)'}}}}});
+// ---------------- SIGNUP / SIGNIN MOCK ----------------
+function signup(){alert("Account Created! (Use backend for real)");closeSignModal();}
+function signin(){alert("Signed In! (Use backend for real)");closeSignModal();}
 </script>
 </body>
 </html>
