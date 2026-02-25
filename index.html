@@ -162,7 +162,7 @@ body.night footer{background:#111;}
 <footer id="contact">
 <div>
 <h4>Contact Us</h4>
-<p>Email: <a href="mailto:enzmamulhaque3127@gmail.com">enzmamulhaque3127@gmail.com</a></p>
+<p>Email: <a href="mailto:srkromana1232@gmail.com">srkromana1232@gmail.com</a></p>
 <p>Phone: +91-XXXXXXXXXX</p>
 </div>
 <div>
@@ -195,7 +195,7 @@ body.night footer{background:#111;}
 <!-- SCRIPTS -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
-// ---------------- THEME ----------------
+// THEME TOGGLE
 const toggleButton=document.getElementById('theme-toggle');
 toggleButton.addEventListener('click',()=>{
 document.body.classList.toggle('day');
@@ -203,11 +203,11 @@ document.body.classList.toggle('night');
 toggleButton.textContent=document.body.classList.contains('night')?'☀️ Day Mode':'🌙 Night Mode';
 });
 
-// ---------------- SIGN MODAL ----------------
+// MODAL
 function openSignModal(){document.getElementById('signModal').style.display='flex';}
 function closeSignModal(){document.getElementById('signModal').style.display='none';}
 
-// ---------------- AI CHAT ----------------
+// AI CHAT
 function toggleChat(){const body=document.getElementById('chat-body');body.style.display=body.style.display==='none'?'flex':'flex';}
 function sendMessage(){
 const input=document.getElementById('chat-input');const text=input.value.trim();if(!text)return;
@@ -222,7 +222,7 @@ else if(text.toLowerCase().includes('docs')){botMsg.innerText='Visit Docs for gu
 else{botMsg.innerText='I am here to help with Tradesk Solution. Please specify your question.';}
 chatBody.appendChild(botMsg);chatBody.scrollTop=chatBody.scrollHeight;}
 
-// ---------------- SIGNUP / SIGNIN MOCK ----------------
+// SIGNUP / SIGNIN MOCK
 function signup(){alert("Account Created! (Use backend for real)");closeSignModal();}
 function signin(){alert("Signed In! (Use backend for real)");closeSignModal();}
 </script>
